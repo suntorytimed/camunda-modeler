@@ -1,0 +1,18 @@
+app-id: com.camunda.Modeler.Plugin.Linter
+branch: stable
+runtime: com.camunda.Modeler
+runtime-version: stable
+sdk: org.freedesktop.Sdk//24.08
+build-extension: true
+separate-locales: false
+appstream-compose: false
+
+modules:
+  - name: linter
+    buildsystem: simple
+    build-commands:
+      - cp -r * ${FLATPAK_DEST}
+    sources:
+      - type: git
+        url: https://github.com/camunda/camunda-modeler-linter-plugin.git
+        tag: 'v0.6.0'
