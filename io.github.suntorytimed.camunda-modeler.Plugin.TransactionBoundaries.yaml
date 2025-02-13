@@ -1,6 +1,6 @@
-app-id: com.camunda.Modeler.Plugin.TransactionBoundaries
+app-id: io.github.suntorytimed.camunda-modeler.Plugin.TransactionBoundaries
 branch: stable
-runtime: com.camunda.Modeler
+runtime: io.github.suntorytimed.camunda-modeler
 runtime-version: stable
 sdk: org.freedesktop.Sdk//24.08
 build-extension: true
