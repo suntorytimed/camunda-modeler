@@ -10,24 +10,30 @@
   <project_license>MIT</project_license>
   <url type="homepage">https://github.com/camunda/camunda-modeler</url>
   <description>
-    <p>Process Modeling Tool</p>
+    <p>
+      *NOTE*: This is an inofficial Flatpak repackaging of the official release of Camunda Modeler.
+    </p>
+    <p>
+      Camunda Modeler is a low-code visual designer tool to model, connect, and prepare your BPMN business processes for execution. Using standards like BPMN and DMN, you can align IT and business with a common model and language. The result is better, more efficient workflows, delivered faster.
+    </p>
   </description>
   <releases>
-    <release version="5.32.0" date="2025-02-12"/> 
-    <url>https://github.com/camunda/camunda-modeler/blob/main/CHANGELOG.md#5320</url>
-    <description>
-      <p>Support for upcoming Camunda 8 features</p>
-        <ul>
-          <li>You can now model an Ad-hoc subprocess and define its active elements.</li>
-        </ul>
-      <p>Support for latest Camunda 8 FEEL built-ins</p>
-        <ul>
-          <li>The FEEL expression editor now supports the latest built-in functions.</li>
-        </ul>
-      <p>Bug fixes and more</p>
-        <ul>
-          <li>As always, this release incorporates bug fixes and additional minor improvements.</li>
-        </ul>
+    <release version="5.32.0" date="2025-02-12"> 
+      <url>https://github.com/camunda/camunda-modeler/blob/main/CHANGELOG.md#5320</url>
+      <description>
+        <p>Support for upcoming Camunda 8 features</p>
+          <ul>
+            <li>You can now model an Ad-hoc subprocess and define its active elements.</li>
+          </ul>
+        <p>Support for latest Camunda 8 FEEL built-ins</p>
+          <ul>
+            <li>The FEEL expression editor now supports the latest built-in functions.</li>
+          </ul>
+        <p>Bug fixes and more</p>
+          <ul>
+            <li>As always, this release incorporates bug fixes and additional minor improvements.</li>
+          </ul>
+      </release>
     </description>
   </releases>
   <screenshots>
