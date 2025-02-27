@@ -27,11 +27,6 @@ jobs:
         manifest-path: io.github.suntorytimed.camunda-modeler.yaml
         cache-key: flatpak-builder-${{ github.sha }}
         gpg-sign: ${{ secrets.GPG_KEY }}
-    - name: Archive Production Artifact
-      uses: actions/upload-artifact@master
-      with:
-        name: dist
-        path: dist
   deploy:
     name: deploy-flatpak
     runs-on: ubuntu-latest
@@ -40,8 +35,7 @@ jobs:
       - name: Download Artifact
         uses: actions/download-artifact@master
         with:
-          name: dist
-          path: dist
+          name: io.github.suntorytimed.camunda-modeler-x86_64
       - name: Deploy
         if: github.event_name != 'pull_request'
         uses: bilelmoussaoui/flatpak-github-actions/flat-manager@v4
