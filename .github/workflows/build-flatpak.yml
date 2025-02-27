@@ -21,6 +21,7 @@ jobs:
         bundle: io.github.suntorytimed.camunda-modeler.flatpak
         manifest-path: io.github.suntorytimed.camunda-modeler.yaml
         cache-key: flatpak-builder-${{ github.sha }}
+        gpg-sign: ${{ secrets.GPG_KEY }}
     - name: Deploy
       if: github.event_name != 'pull_request'
       uses: bilelmoussaoui/flatpak-github-actions/flat-manager@v4
