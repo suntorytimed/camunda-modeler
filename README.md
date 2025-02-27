@@ -12,10 +12,11 @@ flatpak install -u https://flatpak.hibiki.eu/repo/appstream/io.github.suntorytim
 ```
 or by adding the repository including the GPG key:
 ```
-flatpak remote-add -u --gpg-import=https://flatpak.hibiki.eu/repo/hibiki.gpg hibikiEU https://flatpak.hibiki.eu/repo/hibiki.flatpakrepo
+flatpak remote-add -u --gpg-import=https://flatpak.hibiki.eu/repo/hibiki.pgp hibikiEU https://flatpak.hibiki.eu/repo/hibiki.flatpakrepo
 flatpak install -u app/io.github.suntorytimed.camunda-modeler/x86_64/stable
 # this would work as well: flatpak install -u camunda
 ```
+You can also just download the [GPG key](https://flatpak.hibiki.eu/repo/hibiki.pgp) and [flatpakrepo file](https://flatpak.hibiki.eu/repo/hibiki.flatpakrepo) and add those via your GUI tool of choice (e.g. seahorse and GNOME Software).
 ## Build it yourself
 ```
 flatpak install flathub org.freedesktop.Sdk//24.08
