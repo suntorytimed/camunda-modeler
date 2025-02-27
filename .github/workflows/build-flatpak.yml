@@ -31,6 +31,9 @@ jobs:
     name: deploy-flatpak
     runs-on: ubuntu-latest
     needs: build
+    container:
+      image: bilelmoussaoui/flatpak-github-actions:freedesktop-24.08
+      options: --privileged
     steps:
       - name: Download Artifact
         uses: actions/download-artifact@master
