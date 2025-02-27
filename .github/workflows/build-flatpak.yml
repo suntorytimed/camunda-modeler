@@ -27,22 +27,10 @@ jobs:
         manifest-path: io.github.suntorytimed.camunda-modeler.yaml
         cache-key: flatpak-builder-${{ github.sha }}
         gpg-sign: ${{ secrets.GPG_KEY }}
-  deploy:
-    name: deploy-flatpak
-    runs-on: ubuntu-latest
-    needs: build
-    container:
-      image: bilelmoussaoui/flatpak-github-actions:freedesktop-24.08
-      options: --privileged
-    steps:
-      - name: Download Artifact
-        uses: actions/download-artifact@master
-        with:
-          name: io.github.suntorytimed.camunda-modeler-x86_64
-      - name: Deploy
-        if: github.event_name != 'pull_request'
-        uses: bilelmoussaoui/flatpak-github-actions/flat-manager@v4
-        with:
-          repository: ""
-          flat-manager-url: https://flatpak.hibiki.eu
-          token: ${{ secrets.FLATMAN_TOKEN }}
+    - name: Deploy
+      if: github.event_name != 'pull_request'
+      uses: bilelmoussaoui/flatpak-github-actions/flat-manager@v4
+      with:
+        repository: ""
+        flat-manager-url: https://flatpak.hibiki.eu
+        token: ${{ secrets.FLATMAN_TOKEN }}
