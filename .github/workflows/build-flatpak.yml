@@ -16,12 +16,21 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
     - name: Configure GPG Key
+      if: github.event_name != 'pull_request'
       run: |
         echo -n "$GPG_SIGNING_KEY" | gpg --import
       env:
         GPG_SIGNING_KEY: ${{ secrets.GPG_SECRET_KEY }}
-    - name: Build Flatpak
+    - name: Build Test Flatpak
       uses: flatpak/flatpak-github-actions/flatpak-builder@v6
+      if: github.event_name == 'pull_request'
+      with:
+        bundle: io.github.suntorytimed.camunda-modeler.flatpak
+        manifest-path: io.github.suntorytimed.camunda-modeler.yaml
+        cache-key: flatpak-builder-${{ github.sha }}
+    - name: Build Release Flatpak
+      uses: flatpak/flatpak-github-actions/flatpak-builder@v6
+      if: github.event_name != 'pull_request'
       with:
         bundle: io.github.suntorytimed.camunda-modeler.flatpak
         manifest-path: io.github.suntorytimed.camunda-modeler.yaml
