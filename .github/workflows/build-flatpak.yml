@@ -6,7 +6,7 @@ on:
   pull_request:
 
 jobs:
-  flatpak:
+  build:
     name: build-flatpak
     runs-on: ubuntu-latest
     container:
@@ -15,6 +15,11 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+    - name: Configure GPG Key
+      run: |
+        echo -n "$GPG_SIGNING_KEY" | base64 --decode | gpg --import
+      env:
+        GPG_SIGNING_KEY: ${{ secrets.GPG_SECRET_KEY }}
     - name: Build Flatpak
       uses: flatpak/flatpak-github-actions/flatpak-builder@v6
       with:
@@ -22,10 +27,25 @@ jobs:
         manifest-path: io.github.suntorytimed.camunda-modeler.yaml
         cache-key: flatpak-builder-${{ github.sha }}
         gpg-sign: ${{ secrets.GPG_KEY }}
-    - name: Deploy
-      if: github.event_name != 'pull_request'
-      uses: bilelmoussaoui/flatpak-github-actions/flat-manager@v4
+    - name: Archive Production Artifact
+      uses: actions/upload-artifact@master
       with:
-        repository: ""
-        flat-manager-url: https://flatpak.hibiki.eu
-        token: ${{ secrets.FLATMAN_TOKEN }}
+        name: dist
+        path: dist
+  deploy:
+    name: deploy-flatpak
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Download Artifact
+        uses: actions/download-artifact@master
+        with:
+          name: dist
+          path: dist
+      - name: Deploy
+        if: github.event_name != 'pull_request'
+        uses: bilelmoussaoui/flatpak-github-actions/flat-manager@v4
+        with:
+          repository: ""
+          flat-manager-url: https://flatpak.hibiki.eu
+          token: ${{ secrets.FLATMAN_TOKEN }}
