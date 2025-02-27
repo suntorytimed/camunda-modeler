@@ -16,7 +16,9 @@ flatpak remote-add -u --gpg-import=https://flatpak.hibiki.eu/repo/hibiki.pgp hib
 flatpak install -u app/io.github.suntorytimed.camunda-modeler/x86_64/stable
 # this would work as well: flatpak install -u camunda
 ```
-You can also just download the [GPG key](https://flatpak.hibiki.eu/repo/hibiki.pgp) and [flatpakrepo file](https://flatpak.hibiki.eu/repo/hibiki.flatpakrepo) and add those via your GUI tool of choice (e.g. seahorse and GNOME Software).
+You can also just download the [GPG key](https://flatpak.hibiki.eu/repo/hibiki.pgp) and [flatpakrepo file](https://flatpak.hibiki.eu/repo/hibiki.flatpakrepo) and add those via your GUI tool of choice (e.g. seahorse and GNOME Software). The GPG key is available on public keyservers as well:
+* https://keys.openpgp.org/vks/v1/by-fingerprint/7DA1BE30D07020497D5F11EBDFEB41A553E3BD55
+
 ## Build it yourself
 ```
 flatpak install flathub org.freedesktop.Sdk//24.08
