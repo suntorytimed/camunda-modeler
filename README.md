@@ -1,11 +1,21 @@
 # Unofficial Flatpak for Camunda Modeler
-This repository provides an unofficial flatpak for [Camunda Modeler](https://github.com/camunda/camunda-modeler)
+This repository provides an unofficial flatpak for [Camunda Modeler](https://github.com/camunda/camunda-modeler). This flatpak repackages the official release by the Camunda community project.
 
+## Install runtime dependency
+```
+flatpak install -u org.freedesktop.Platform/x86_64/24.08
+```
 ## Install from flatpak.hibiki.eu
+Directly via flatpakref:
 ```
-flatpak install https://flatpak.hibiki.eu/repo/appstream/io.github.suntorytimed.camunda-modeler.flatpakref
+flatpak install -u https://flatpak.hibiki.eu/repo/appstream/io.github.suntorytimed.camunda-modeler.flatpakref
 ```
-
+or by adding the repository including the GPG key:
+```
+flatpak remote-add -u --gpg-import=https://flatpak.hibiki.eu/repo/hibiki.gpg hibikiEU https://flatpak.hibiki.eu/repo/hibiki.flatpakrepo
+flatpak install -u app/io.github.suntorytimed.camunda-modeler/x86_64/stable
+# this would work as well: flatpak install -u camunda
+```
 ## Build it yourself
 ```
 flatpak install flathub org.freedesktop.Sdk//24.08
