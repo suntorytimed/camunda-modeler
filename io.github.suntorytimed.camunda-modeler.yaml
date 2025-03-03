@@ -37,8 +37,8 @@ modules:
     sources:
       - type: archive
         only-arches: [x86_64]
-        url: https://github.com/camunda/camunda-modeler/releases/download/v5.32.0/camunda-modeler-5.32.0-linux-x64.tar.gz
-        sha256: 24e26b46fadfdcacfe39b0dfc986120157e8bd0d7965ca4d3cc1d727e82b66f0
+        url: https://github.com/camunda/camunda-modeler/releases/download/v5.33.0/camunda-modeler-5.33.0-linux-x64.tar.gz
+        sha256: 80d9f912b7b904a3989d79aae168b6b50d1835a754a410a7701275e4aab1b41a
         strip-components: 1
         dest: camunda-modeler
       - type: file
