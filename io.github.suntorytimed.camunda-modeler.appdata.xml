@@ -20,6 +20,17 @@
     </p>
   </description>
   <releases>
+      <release version="5.33.1" date="2025-03-05">
+      <url>https://github.com/camunda/camunda-modeler/blob/main/CHANGELOG.md#5331</url>
+      <description>
+        <ul>
+          <li>
+            <p><b>Bug fix</b></p>
+            <p>C8 OAuth connection with custom audience</p>
+          </li>
+        </ul>
+      </description>
+    </release>
     <release version="5.33.0" date="2025-02-27">
       <url>https://github.com/camunda/camunda-modeler/blob/main/CHANGELOG.md#5330</url>
       <description>
