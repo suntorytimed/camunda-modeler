@@ -20,7 +20,32 @@
     </p>
   </description>
   <releases>
-      <release version="5.33.1" date="2025-03-05">
+    <releases>
+      <release version="5.34.0" date="2025-04-04">
+      <url>https://github.com/camunda/camunda-modeler/blob/main/CHANGELOG.md#5331</url>
+      <description>
+        <ul>
+          <li>
+            <p><b>Support for upcoming Camunda features</b></p>
+            <p>Camunda 8.7 and 7.23 are now fully supported.
+          Also, you can now configure <a href="https://docs.camunda.io/docs/next/components/modeler/bpmn/ad-hoc-subprocesses/?utm_source=modeler&utm_medium=referral#completion">completion attributes</a> of ad-hoc subprocesses.</p>
+          </li>
+          <li>
+            <p><b>Support for process applications</b></p>
+            <p>We now support <a href="https://docs.camunda.io/docs/8.7/components/modeler/desktop-modeler/process-applications/?utm_source=modeler&utm_medium=referral">process applications</a> and resource linking. You can use process applications to easily group processes, decisions, and forms in a project, and link them.</p>
+          </li>
+          <li>
+            <p><b>RPA editor</b></p>
+            <p>Edit, test and deploy <a href="https://docs.camunda.io/docs/8.7/components/rpa/overview/?utm_source=modeler&utm_medium=referral">Robotic Process Automation (RPA)</a> scripts with the new RPA editor.</p>
+          </li>
+          <li>
+            <p><b>Bug fixes and more</b></p>
+            <p>As always, this release incorporates bug fixes and additional minor improvements.</p>
+          </li>
+        </ul>
+      </description>
+    </release>
+    <release version="5.33.1" date="2025-03-05">
       <url>https://github.com/camunda/camunda-modeler/blob/main/CHANGELOG.md#5331</url>
       <description>
         <ul>
