@@ -19,8 +19,32 @@
       Camunda Modeler is a low-code visual designer tool to model, connect, and prepare your BPMN business processes for execution. Using standards like BPMN and DMN, you can align IT and business with a common model and language. The result is better, more efficient workflows, delivered faster.
     </p>
   </description>
-  <releases>
-      <release version="5.33.1" date="2025-03-05">
+    <releases>
+      <release version="5.34.0" date="2025-04-04">
+      <url>https://github.com/camunda/camunda-modeler/blob/main/CHANGELOG.md#5331</url>
+      <description>
+        <ul>
+          <li>
+            <p><b>Support for upcoming Camunda features</b></p>
+            <p>Camunda 8.7 and 7.23 are now fully supported.
+          Also, you can now configure completion attributes of ad-hoc subprocesses.</p>
+          </li>
+          <li>
+            <p><b>Support for process applications</b></p>
+            <p>We now support process applications and resource linking. You can use process applications to easily group processes, decisions, and forms in a project, and link them.</p>
+          </li>
+          <li>
+            <p><b>RPA editor</b></p>
+            <p>Edit, test and deploy Robotic Process Automation (RPA) scripts with the new RPA editor.</p>
+          </li>
+          <li>
+            <p><b>Bug fixes and more</b></p>
+            <p>As always, this release incorporates bug fixes and additional minor improvements.</p>
+          </li>
+        </ul>
+      </description>
+    </release>
+    <release version="5.33.1" date="2025-03-05">
       <url>https://github.com/camunda/camunda-modeler/blob/main/CHANGELOG.md#5331</url>
       <description>
         <ul>
@@ -37,11 +61,11 @@
         <ul>
           <li>
             <p><b>Support for upcoming Camunda 8 features</b></p>
-            <p>You can now create diagrams for Camunda 8.8. We also added support for an <code>updating</code> <a href="https://docs.camunda.io/docs/next/components/concepts/user-task-listeners?utm_source=modeler&amp;utm_medium=referral#supported-events">user task listener.</a></p>
+            <p>You can now create diagrams for Camunda 8.8. We also added support for an <code>updating</code> user task listener.</p>
           </li>
           <li>
             <p><b>Better modeling guidance</b></p>
-            <p>We improved our validation of Camunda 8 ad-hoc subprocesses. Additionally, the modeler now <a href="https://github.com/camunda/camunda-modeler/pull/4843">recognizes documentation URLs provided by linter plug-ins.</a></p>
+            <p>We improved our validation of Camunda 8 ad-hoc subprocesses. Additionally, the modeler now recognizes documentation URLs provided by linter plug-ins.</p>
           </li>
           <li>
             <p><b>BPMN modeling improvements</b></p>
@@ -60,11 +84,11 @@
         <ul>
           <li>
             <p><b>Support for upcoming Camunda 8 features</b></p>
-            <p>You can now model an Ad-hoc subprocess and define its active elements. <a href="https://docs.camunda.io/docs/next/components/modeler/bpmn/ad-hoc/?utm_source=modeler&amp;utm_medium=referral">Learn more.</a></p>
+            <p>You can now model an Ad-hoc subprocess and define its active elements.</p>
           </li>
           <li>
             <p><b>Support for latest Camunda 8 FEEL built-ins</b></p>
-            <p>The FEEL expression editor now supports the latest built-in functions. <a href="https://docs.camunda.io/docs/components/modeler/feel/builtin-functions/feel-built-in-functions-introduction/">Learn more.</a></p>
+            <p>The FEEL expression editor now supports the latest built-in functions.</p>
           </li>
           <li>
             <p><b>Bug fixes and more</b></p>
