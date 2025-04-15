@@ -43,3 +43,35 @@ jobs:
         repository: ""
         flat-manager-url: https://flatpak.hibiki.eu
         token: ${{ secrets.FLATMAN_TOKEN }}
+
+jobs:
+  build:
+    name: build-plugin
+    needs: build-flatpak
+    runs-on: ubuntu-latest
+    container:
+      image: bilelmoussaoui/flatpak-github-actions:freedesktop-24.08
+      options: --privileged
+    steps:
+    - name: Build Plugin Flatpak
+      uses: flatpak/flatpak-github-actions/flatpak-builder@v6
+      if: github.event_name == 'pull_request'
+      with:
+        bundle: io.github.suntorytimed.camunda-modeler.Plugin.token-simulation.flatpak
+        manifest-path: io.github.suntorytimed.camunda-modeler.Plugin.token-simulation.yaml
+        cache-key: flatpak-builder-${{ github.sha }}
+    - name: Build Release Flatpak
+      uses: flatpak/flatpak-github-actions/flatpak-builder@v6
+      if: github.event_name != 'pull_request'
+      with:
+        bundle: io.github.suntorytimed.camunda-modeler.Plugin.token-simulation.flatpak
+        manifest-path: io.github.suntorytimed.camunda-modeler.Plugin.token-simulation.yaml
+        cache-key: flatpak-builder-${{ github.sha }}
+        gpg-sign: ${{ secrets.GPG_KEY }}
+    - name: Deploy
+      if: github.event_name != 'pull_request'
+      uses: bilelmoussaoui/flatpak-github-actions/flat-manager@v4
+      with:
+        repository: ""
+        flat-manager-url: https://flatpak.hibiki.eu
+        token: ${{ secrets.FLATMAN_TOKEN }}
