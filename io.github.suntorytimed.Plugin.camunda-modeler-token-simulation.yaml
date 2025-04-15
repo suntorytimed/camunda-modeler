@@ -1,0 +1,18 @@
+app-id: io.github.suntorytimed.Plugin.camunda-modeler-token-simulation
+branch: stable
+runtime: io.github.suntorytimed.camunda-modeler
+runtime-version: stable
+sdk: org.freedesktop.Sdk//24.08
+build-extension: true
+separate-locales: false
+appstream-compose: false
+
+modules:
+  - name: token-simulation
+    buildsystem: simple
+    build-commands:
+      - cp -r * ${FLATPAK_DEST}
+    sources:
+      - type: git
+        url: https://github.com/camunda/camunda-modeler-token-simulation-plugin.git
+        tag: 'v0.22.0'
