@@ -1,4 +1,4 @@
-app-id: io.github.suntorytimed.camunda-modeler.Plugin.token-simulation
+app-id: io.github.suntorytimed.Plugin.camunda-modeler-token-simulation
 branch: stable
 runtime: io.github.suntorytimed.camunda-modeler
 runtime-version: stable
