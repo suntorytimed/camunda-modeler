@@ -2,7 +2,7 @@ app-id: io.github.suntorytimed.Plugin.camunda-modeler-token-simulation
 branch: stable
 runtime: io.github.suntorytimed.camunda-modeler
 runtime-version: stable
-sdk: org.freedesktop.Sdk
+sdk: org.freedesktop.Sdk//24.08
 build-extension: true
 separate-locales: false
 appstream-compose: false
