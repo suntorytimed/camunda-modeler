@@ -1,4 +1,4 @@
-name: 📦 Build Flatpak
+name: 📦 Build Flatpaks
 
 on:
   push:
@@ -65,6 +65,8 @@ jobs:
       with:
         bundle: io.github.suntorytimed.Plugin.camunda-modeler-token-simulation.flatpak
         manifest-path: io.github.suntorytimed.Plugin.camunda-modeler-token-simulation.yaml
+        repository-name: HibikiEU
+        repository-url: https://flatpak.hibiki.eu/repo/
         cache-key: flatpak-builder-${{ github.sha }}
     - name: Build Release Flatpak
       uses: flatpak/flatpak-github-actions/flatpak-builder@v6
