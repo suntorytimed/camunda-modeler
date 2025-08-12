@@ -20,8 +20,35 @@
     </p>
   </description>
     <releases>
+      <release version="5.38.0" date="2025-08-06">
+        <url>https://github.com/camunda/camunda-modeler/blob/main/CHANGELOG.md#5380</url>
+        <description>
+          <ul>
+            <li>
+              <p><b>Improvements in element templates</b></p>
+              <p>You can now configure a script task as a FEEL expression, define the called decision of a business rule task, and configure a form linked to a user task.</p>
+            </li>
+            <li>
+              <p><b>Camunda FEEL editor intelligence</b></p>
+              <p>Our FEEL editor now supports escaping variable names with backticks. We've improved support for the Camunda dialect, ensuring that all built-in functions are now fully recognized.</p>
+            </li>
+            <li>
+              <p><b>Better linting for IO mapping</b></p>
+              <p>The Modeler now helps ensure you have the right IO mappings for the Camunda version you're using.</p>
+            </li>
+            <li>
+              <p><b>Custom validation messages in Forms</b></p>
+              <p>You can now add custom error messages to form inputs validated with regex patterns.</p>
+            </li>
+            <li>
+              <p><b>Bug fixes and more</b></p>
+              <p>As always, this release incorporates bug fixes and additional minor improvements.</p>
+            </li>
+          </ul>
+        </description>
+      </release>
       <release version="5.34.0" date="2025-04-04">
-      <url>https://github.com/camunda/camunda-modeler/blob/main/CHANGELOG.md#5331</url>
+      <url>https://github.com/camunda/camunda-modeler/blob/main/CHANGELOG.md#5334</url>
       <description>
         <ul>
           <li>
