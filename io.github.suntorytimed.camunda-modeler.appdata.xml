@@ -20,6 +20,34 @@
     </p>
   </description>
     <releases>
+      <release version="5.43.1" date="2026-01-13">
+        <url>https://github.com/camunda/camunda-modeler/blob/main/CHANGELOG.md#5380</url>
+        <description>
+          <ul>
+            <li>
+              <p><b>Connection manager</b></p>
+              <p>You can now create and store multiple connections using the settings, and easily switch between connections from the status bar.</p>
+            </li>
+            <li>
+              <p><b>Enhanced element template support</b></p>
+              <p>Element templates now support templating timer events, enabling reusable timer configuration across processes.
+          If an applied template is missing in the current configuration, its ID and version are displayed in the Template section of the properties panel for easier troubleshooting.</p>
+            </li>
+            <li>
+              <p><b>Task testing improvements</b></p>
+              <p>The Modeler now helps ensure you have the right IO mappings for the Camunda version you're using.</p>
+            </li>
+            <li>
+              <p><b>Custom validation messages in Forms</b></p>
+              <p>The incident error message is now displayed in a readable format. Task testing supports process applications, and uses the configured tenant ID if provided.</p>
+            </li>
+            <li>
+              <p><b>Bug fixes and more</b></p>
+              <p>As always, this release incorporates bug fixes and additional minor improvements.</p>
+            </li>
+          </ul>
+        </description>
+      </release>
       <release version="5.38.0" date="2025-08-06">
         <url>https://github.com/camunda/camunda-modeler/blob/main/CHANGELOG.md#5380</url>
         <description>
